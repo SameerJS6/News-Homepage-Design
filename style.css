@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+
+/* Custom Properties  */
+:root {
+    --bg: hsl(36, 100%, 99%);
+    --accent: hsl(233, 8%, 79%);
+    --primary-400: hsl(35, 77%, 62%);
+    --neutral-700:  hsl(236, 13%, 42%);
+    --neutral-900:  hsl(240, 100%, 5%);
+    --hover: hsl(5, 85%, 63%);
+    --sidebar: hsl(240, 100%, 5%);
+    
+    --ff-primary: 'Inter', sans-serif;
+    --transition: all .5s ease;
+    --transition-1s: all 1s ease;
+
+    --size-300: 0.9375rem; 
+    --size-400: 1rem; 
+    --size-450: 1.15rem; 
+    --size-500: 1.25rem; 
+    --size-600: 1.5rem; 
+    --size-700: 1.75rem; 
+    --size-800: 2rem; 
+    --size-900: 2.5rem; 
+
+    --fw-regu: 400;
+    --fw-semi: 700;
+    --fw-bold: 800;
+    --fw-extra-bold: 900;
+}
+.DarkMode {
+    --bg: #050412;
+    --accent: hsl(233, 8%, 79%);
+    --primary-400: hsl(34, 84%, 57%);
+    --neutral-700:  #B3B8EF;
+    --neutral-900:  hsl(36, 100%, 99%);
+    --hover: hsl(5, 85%, 73%);
+    --sidebar:  #2F304C;
+}
+/* CSS Reset  */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* General Styling  */
+body {
+    display: grid;
+    place-content: center;
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+    background: var(--bg);
+    font-family: var(--ff-primary);
+    transition: var(--transition);
+}
+header {
+    display: flex;
+    align-items: center;
+    margin-block: 1rem;
+    /* width: calc(100% - 2rem); */
+    max-width: 1440px;
+    justify-content: space-between;
+}
+.nav-lists {
+    display: flex;
+    /* gap: 1rem; */
+    list-style: none;
+}
+.nav-lists a {
+    border: none;
+    border-radius: 100vmax;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: var(--neutral-700);
+    transition: var(--transition);
+}
+.nav-lists a:hover {
+    color: var(--hover);
+    background-color: var(--bg);
+    box-shadow: 0 0px 30px rgba(22, 22, 22, 0.06)
+}
+
+/* Hamburger Menu  */
+.menu {
+    display: none;
+}
+@media (max-width: 45em){
+    .nav-lists {
+        display: none;
+    }
+    .menu {
+        display: block;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+        padding: 1rem 1rem 0.9rem;
+        background: var(--accent);
+    }
+    .menu div {
+        width: 25px;
+        height: 2px;
+        margin-block-end: .35rem;
+        border-radius: 100vmax;
+        border: none;
+        background: var(--neutral-900);
+        transition: var(--transition-1s);
+    }
+}
+
+/* Main-container  */
+.main-news-grid {
+    display: grid;
+    gap: 1rem;
+}
+.hero-img, picture, .mobile-hero {
+    border: none;
+    margin-block: 1rem;
+    border-radius: 5rem;
+    transition: var(--transition);
+    box-shadow: 0 5px 35px rgba(22, 22, 22, 0.089);
+}
+
+/* Heading  */
+.heading {
+    line-height: 1;
+    color: var(--neutral-900);
+    transition: var(--transition);
+    font-size: var(--size-700);
+    font-weight: var(--fw-extra-bold);
+}
+
+/* Paragraph */
+.main-para p {
+    opacity: 0.7;
+    line-height: 1.4;
+    color: var(--neutral-700);
+    font-size: var(--size-300);
+    font-weight: var(--fw-regu);
+}
+.btn {
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    border-radius: 100vmax;
+    font-size: var(--size-400);
+    font-weight: var(--fw-semi);
+    padding: 0.5rem 1.25rem;
+    color: var(--bg);
+    letter-spacing: 3px;
+    margin-block-start: 1rem;
+    background: var(--neutral-900);
+}
+
+/* News SideBar */
+.sidebar {
+    border: none;
+    border-radius: 2rem;
+    padding: 1.25rem 1rem 1.75rem;
+    transition: var(--transition);
+    background: var(--sidebar);
+    margin-block: 1rem 1.5rem;
+    box-shadow: 0 5px 15px rgba(12, 14, 32, 0.123);
+}
+.sidebar h2 {
+    color: var(--primary-400);
+    font-size: var(--size-700);
+    transition: var(--transition);
+}
+.new-content-wrapper {
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--bg);
+}
+.new-content-wrapper h3 {
+    font-size: var(--size-450);
+    font-weight: var(--fw-bold);
+    padding-block-end: 1rem;
+    color: var(--bg)
+}
+.new-content-wrapper p {
+    opacity: 0.7;
+    font-weight: var(--fw-regu);
+    font-size: var(--size-300);
+    color: var(--accent);
+}
+
+/* Footer Content  */
+.footer {
+    display: grid;
+    gap: 1rem;
+}
+.footer-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+.footer-wrapper img {
+    aspect-ratio: 1/1;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(22, 22, 22, 0.116);
+}
+.wrapper-content h2{
+    color: var(--accent);
+    font-size: var(--size-700);
+    transition: var(--transition);
+}
+.wrapper-content h3 {
+    line-height: 1.3;
+    color: var(--neutral-900);
+    padding-block-end: 0.5rem;
+    font-size: var(--size-500);
+    font-weight: var(--fw-bold);
+    transition: var(--transition);
+}
+.wrapper-content p {
+    opacity: 0.7;
+    line-height: 1.3;
+    color: var(--neutral-700);
+    transition: var(--transition);
+}
+
+
+
+
+
+
+
+
+
+/* Width Media Quires  */
+@media (min-width: 35em) {
+    body {
+        width: calc(100% - 5rem);
+    }
+    .main-news-grid {
+        grid-template-areas: 
+        "one one"
+        "two five"
+        "three five"
+        "four four";
+    }
+    .one {
+        grid-area: one;
+    }
+    .two {
+        grid-area: two;
+    }
+    .three {
+        grid-area: three;
+    }
+    .four {
+        grid-area: four;
+    }
+    .five {
+        grid-area: five;
+    }
+} 
+@media (min-width: 45em) {
+    .main-news-grid {
+        grid-template-areas: 
+        "one one"
+        "two three"
+        "four five";
+    }
+    .one {
+        grid-area: one;
+    }
+    .two {
+        grid-area: two;
+    }
+    .three {
+        grid-area: three;
+    }
+    .four {
+        grid-area: four;
+    }
+    .five {
+        grid-area: five;
+    }
+}
+@media (min-width: 65em) {
+    body {
+        width: calc(100% - 15rem);
+        max-width: 1440px;
+    }
+    .main-news-grid {
+        grid-template-areas: 
+        "one one five"
+        "two three five"
+        "four four four";
+    }
+    .one {
+        grid-area: one;
+    }
+    .two {
+        grid-area: two;
+    }
+    .three {
+        grid-area: three;
+    }
+    .four {
+        grid-area: four;
+    }
+    .five {
+        grid-area: five;
+    }
+
+    .footer {
+        display: flex;
+        gap: 1rem;
+        margin-block: 1.5rem 1rem;
+        align-items: flex-start;
+    }
+} 
+@media (min-width: 95em) {
+    body {
+        width: calc(100% - 20rem);
+    }
+} 
