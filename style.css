@@ -174,7 +174,7 @@ header {
         top: 0;
         z-index: 2;
         width: 70%;
-        height: 100em;
+        height: 81em;
         overflow: hidden;
         background: var(--bg);
         transition: var(--transition-1s);
@@ -241,6 +241,24 @@ header {
         border: none;
         background: var(--neutral-900);
         transition: var(--transition);
+    }
+    main[data-overlay]::before {
+        content: ""; 
+        z-index: 1;
+        position: absolute;
+        inset: 0;
+        height: 81em;
+        opacity: .5;
+        animation: opa 1s ease alternate;
+        background: linear-gradient(to bottom, #474747, #161616);
+    }
+    @keyframes opa {
+        from {
+            opacity: 0;
+        }        
+        to {
+            opacity: 0.45;
+        }
     }
 }
 
