@@ -162,16 +162,73 @@ header {
     display: none;
 }
 @media (max-width: 45em){
+    .scroll-hidden {
+        overflow: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
     .nav-lists {
+        z-index: 2;
         display: none;
+        gap: 1rem;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        margin: 0;
+        padding-inline: .5rem 0;
+        padding-block-start: 10rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background: var(--bg);
+        /* opacity: 0; */
+        overflow: hidden;
+        transition: var(--transition-1s);
+        animation: SlideIn 1s ease forwards alternate;
+        box-shadow: 0 5px 35px rgba(22, 22, 22, 0.247);
+    }
+    @keyframes SlideIn {
+        0% {
+            opacity: 0;
+            transform: translateX(250px);
+        }
+        50% {
+            transform: translateX(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+            overflow: hidden;
+        }
+        
+    }
+    *{
+        outline: 2px solid limegreen;
+    }
+    .active {
+        display: flex;
+        overflow: hidden;
     }
     .menu {
+        z-index: 1000;
         display: block;
         cursor: pointer;
         border: none;
         border-radius: 50%;
         padding: 1rem 1rem 0.9rem;
-        background: var(--accent);
+        /* background: var(--accent); */
+    }
+    .close div:nth-child(1) {
+        transform: scale(1.05) rotate(43deg) translate(-7px, 8px);
+    }
+    .close div:nth-child(2) {
+        opacity: 0;
+    }
+    .close div:nth-child(3) {
+        transform: scale(1.05) rotate(-40deg) translate(1px, -17px);
     }
     .menu div {
         width: 25px;
@@ -180,7 +237,7 @@ header {
         border-radius: 100vmax;
         border: none;
         background: var(--neutral-900);
-        transition: var(--transition-1s);
+        transition: var(--transition);
     }
 }
 
@@ -208,6 +265,7 @@ header {
 .logo {
     fill: var(--svg);
 }
+
 /* Paragraph */
 .main-para p {
     opacity: 0.7;
