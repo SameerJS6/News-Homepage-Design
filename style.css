@@ -258,6 +258,7 @@ header {
 .footer {
     display: grid;
     gap: 1rem;
+    margin-block: 1.5rem 1rem;
 }
 .footer-wrapper {
     display: flex;
@@ -380,7 +381,7 @@ header {
     .footer {
         display: flex;
         gap: 1rem;
-        margin-block: 1.5rem 1rem;
+        
         align-items: flex-start;
     }
 } 
