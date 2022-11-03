@@ -28,14 +28,16 @@
     --fw-bold: 800;
     --fw-extra-bold: 900;
 }
-.DarkMode {
-    --bg: #050412;
-    --accent: hsl(233, 8%, 79%);
-    --primary-400: hsl(34, 84%, 57%);
-    --neutral-700:  #B3B8EF;
-    --neutral-900:  hsl(36, 100%, 99%);
-    --hover: hsl(5, 85%, 73%);
-    --sidebar:  #2F304C;
+@media(prefer-colors-scheme: dark) {
+    :root {
+        --bg: #050412;
+        --accent: hsl(233, 8%, 79%);
+        --primary-400: hsl(34, 84%, 57%);
+        --neutral-700:  #B3B8EF;
+        --neutral-900:  hsl(36, 100%, 99%);
+        --hover: hsl(5, 85%, 73%);
+        --sidebar:  #2F304C;
+    }
 }
 /* CSS Reset  */
 
