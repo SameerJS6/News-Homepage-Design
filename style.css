@@ -9,6 +9,8 @@
     --neutral-900:  hsl(240, 100%, 5%);
     --hover: hsl(5, 85%, 63%);
     --sidebar: hsl(240, 100%, 5%);
+    --svg: #00001A;
+    --white: hsl(36, 100%, 99%);
     
     --ff-primary: 'Inter', sans-serif;
     --transition: all .5s ease;
@@ -37,6 +39,8 @@
         --neutral-900:  hsl(36, 100%, 99%);
         --hover: hsl(5, 85%, 73%);
         --sidebar:  #2F304C;
+        --svg: hsl(36, 100%, 99%);
+        --white: hsl(36, 100%, 99%);
     }
 }
 /* CSS Reset  */
@@ -201,7 +205,9 @@ header {
     font-size: var(--size-700);
     font-weight: var(--fw-extra-bold);
 }
-
+.logo {
+    fill: var(--svg);
+}
 /* Paragraph */
 .main-para p {
     opacity: 0.7;
@@ -247,7 +253,7 @@ header {
     font-size: var(--size-450);
     font-weight: var(--fw-bold);
     padding-block-end: 1rem;
-    color: var(--bg)
+    color: var(--white);
 }
 .new-content-wrapper p {
     opacity: 0.7;
@@ -293,13 +299,6 @@ header {
     color: var(--neutral-700);
     transition: var(--transition);
 }
-
-
-
-
-
-
-
 
 
 /* Width Media Quires  */
