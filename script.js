@@ -1,8 +1,8 @@
 let Menu = document.querySelector(".menu");
-let NavList = document.querySelector(".nav-lists");
+let Nav = document.querySelector(".navbar");
 
 Menu.addEventListener("click", ()=> {
-    NavList.classList.toggle("active");
+    Nav.classList.toggle("active");
     document.body.classList.toggle("scroll-hidden");
     Menu.classList.toggle('close');
 })
