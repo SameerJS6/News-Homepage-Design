@@ -28,7 +28,7 @@
     --fw-bold: 800;
     --fw-extra-bold: 900;
 }
-@media(prefer-colors-scheme: dark) {
+@media(prefers-colors-scheme: dark) {
     :root {
         --bg: #050412;
         --accent: hsl(233, 8%, 79%);
