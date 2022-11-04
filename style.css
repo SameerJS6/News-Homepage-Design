@@ -145,12 +145,20 @@ header {
     /* gap: 1rem; */
     list-style: none;
 }
+.nav-lists li {
+    border: none;
+    overflow: hidden;
+    padding: .5rem 1rem;
+    border-radius: 100vmax;
+    cursor: default;
+}
 .nav-lists a {
     border: none;
     border-radius: 100vmax;
-    padding: .5rem 1rem;
+    /* padding: .5rem 1rem; */
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
     color: var(--neutral-700);
     transition: var(--transition);
 }
@@ -200,17 +208,14 @@ header {
     @keyframes SlideIn {
         0% {
             opacity: 0;
-            right: -300px
-            /* transform: translateX(250px); */
+            right: -300px;
         }
         50% {
             right: 10px;
-            /* transform: translateX(-10px); */
         }
         100% {
             opacity: 1;
             right: 0;
-            /* transform: translateX(0px); */
             overflow: hidden;
         }
         
@@ -223,16 +228,15 @@ header {
         border: none;
         border-radius: 50%;
         padding: 1rem 1rem 0.9rem;
-        /* background: var(--accent); */
     }
     .close div:nth-child(1) {
-        transform: scale(1.05) rotate(43deg) translate(-7px, 8px);
+        transform: rotate(43deg) translate(-7px, 8px);
     }
     .close div:nth-child(2) {
         opacity: 0;
     }
     .close div:nth-child(3) {
-        transform: scale(1.05) rotate(-40deg) translate(1px, -17px);
+        transform: rotate(-40deg) translate(1px, -17px);
     }
     .menu div {
         width: 25px;
@@ -452,7 +456,7 @@ main {
     .hero-img, picture, .mobile-hero {
         border-radius: 10rem;
     }
-    
+
     /* Font Sizes  */
     .heading {
         font-size: 2rem;
@@ -509,3 +513,30 @@ main {
         width: calc(100% - 20rem);
     }
 } 
+
+
+/* Ripple Effect Element  */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: var(--hover);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: animate 1s linear;
+  }
+  @keyframes animate {
+    0%{
+      width: 0px;
+      height: 0px;
+      opacity: .3;
+    }
+    100%{
+      width: 500px;
+      height: 500px;
+      opacity: 0;
+    }
+  }
