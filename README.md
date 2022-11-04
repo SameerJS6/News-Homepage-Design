@@ -86,7 +86,7 @@ Also learned about this Media Funcition of CSS, see below:
 
 ## Author
 
-- Github - [SammerJS6](https://github.com/SameerJS6)
+- Github - [SameerJS6](https://github.com/SameerJS6)
 - Frontend Mentor - [SameerJS6](https://www.frontendmentor.io/profile/sameerjs6)
 
 ## Acknowledgments
