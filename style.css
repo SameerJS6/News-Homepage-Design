@@ -11,6 +11,7 @@
     --sidebar: hsl(240, 100%, 5%);
     --svg: #00001A;
     --white: hsl(36, 100%, 99%);
+    --read-hover: hsl(236, 13%, 22%);
     
     --ff-primary: 'Inter', sans-serif;
     --transition: all .5s ease;
@@ -41,6 +42,7 @@
         --sidebar:  #2F304C;
         --svg: hsl(36, 100%, 99%);
         --white: hsl(36, 100%, 99%);
+        --read-hover: #B3B8EF;
     }
 }
 /* CSS Reset  */
