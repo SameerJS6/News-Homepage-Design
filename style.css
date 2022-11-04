@@ -149,6 +149,7 @@ header {
     border: none;
     border-radius: 100vmax;
     padding: .5rem 1rem;
+    font-weight: 600;
     text-decoration: none;
     color: var(--neutral-700);
     transition: var(--transition);
@@ -277,6 +278,17 @@ main {
     transition: var(--transition);
     box-shadow: 0 5px 35px rgba(22, 22, 22, 0.089);
 }
+/* Hero Image Hover Effect */
+.hero-img {
+    overflow: hidden;
+}
+.hero-img img {
+    filter: brightness(100%);
+}
+.hero-img:hover img {
+    filter: brightness(120%);
+    transform: scale(1.2) translateY(-5px);
+}
 
 /* Heading  */
 .heading {
@@ -311,7 +323,10 @@ main {
     margin-block-start: 1rem;
     background: var(--neutral-900);
 }
-
+.btn:hover {
+    background-color: hsl(236, 13%, 22%);
+    transform: translateY(-5px);
+}
 /* News SideBar */
 .sidebar {
     border: none;
@@ -321,6 +336,9 @@ main {
     background: var(--sidebar);
     margin-block: 1rem 1.5rem;
     box-shadow: 0 5px 15px rgba(12, 14, 32, 0.123);
+}
+.sidebar:hover {
+    transform: translateY(-5px);
 }
 .sidebar h2 {
     color: var(--primary-400);
@@ -360,20 +378,33 @@ main {
     height: 100px;
     border: none;
     border-radius: 50%;
+    transition: var(--transition);
     box-shadow: 0 5px 20px rgba(22, 22, 22, 0.116);
+}
+.footer-wrapper img:hover {
+    transform: translateY(-5px);
 }
 .wrapper-content h2{
     color: var(--accent);
     font-size: var(--size-700);
     transition: var(--transition);
 }
+.wrapper-content a,
 .wrapper-content h3 {
     line-height: 1.3;
+    text-decoration: none;
     color: var(--neutral-900);
     padding-block-end: 0.5rem;
     font-size: var(--size-500);
     font-weight: var(--fw-bold);
+    cursor: pointer;
     transition: var(--transition);
+}
+.wrapper-content a:hover {
+    color: var(--hover);
+}
+.wrapper-content h3:hover {
+    transform: translateY(-3px);
 }
 .wrapper-content p {
     opacity: 0.7;
@@ -391,8 +422,8 @@ main {
     .main-news-grid {
         grid-template-areas: 
         "one one"
-        "two five"
-        "three five"
+        "two three"
+        "five five"
         "four four";
     }
     .one {
@@ -418,20 +449,22 @@ main {
         "two three"
         "four five";
     }
-    .one {
-        grid-area: one;
+    .hero-img, picture, .mobile-hero {
+        border-radius: 10rem;
     }
-    .two {
-        grid-area: two;
+    
+    /* Font Sizes  */
+    .heading {
+        font-size: 2rem;
     }
-    .three {
-        grid-area: three;
+    .main-para p {
+        font-size: 1.1rem;
     }
-    .four {
-        grid-area: four;
+    .sidebar h2 {
+        font-size: var(--size-800);
     }
-    .five {
-        grid-area: five;
+    .footer {
+        margin-block-start: 2rem;
     }
 }
 @media (min-width: 65em) {
@@ -445,22 +478,25 @@ main {
         "two three five"
         "four four four";
     }
-    .one {
-        grid-area: one;
+ 
+    /* Font Sizes  */
+    .nav-lists a {
+        font-size: 1.1rem;
     }
-    .two {
-        grid-area: two;
+    .heading {
+        font-size: 2.25rem;
     }
-    .three {
-        grid-area: three;
+    .main-para p {
+        font-size: 1.1rem;
     }
-    .four {
-        grid-area: four;
+    .sidebar h2 {
+        font-size: var(--size-800);
     }
-    .five {
-        grid-area: five;
+    .new-content-wrapper h3 {
+        font-size: var(--size-500);
     }
 
+    /* Footer Margin */
     .footer {
         display: flex;
         gap: 1rem;
