@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Light Mode Preview](Preview.png.jpg)
+![Light Mode Preview](Preview.png)
 
 
 ### Links
