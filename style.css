@@ -538,3 +538,18 @@ span{
       opacity: 0;
     }
   }
+
+  /* ScrollBar  */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--hover);
+    border-radius: 15px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(5, 85%, 55%);
+  }
