@@ -25,9 +25,3 @@ Ripple.forEach((ripple) => {
     }, 10000);
   });
 });
-
-const Preloader = document.querySelector("[data-preloader]");
-
-window.addEventListener("load", () => {
-  Preloader.style.display = "none";
-});
