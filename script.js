@@ -1,27 +1,27 @@
 const Menu = document.querySelector(".menu");
 const Nav = document.querySelector(".navbar");
-const Main = document.querySelector(".main")
+const Main = document.querySelector(".main");
 const Ripple = document.querySelectorAll(".ripple");
 
-Menu.addEventListener("click", ()=> {
-    Nav.classList.toggle("active");
-    Menu.classList.toggle('close');
-    Main.toggleAttribute('data-overlay');
-    document.body.classList.toggle("scroll-hidden");
+Menu.addEventListener("click", () => {
+  Nav.classList.toggle("active");
+  Menu.classList.toggle("close");
+  Main.toggleAttribute("data-overlay");
+  document.body.classList.toggle("scroll-hidden");
 });
 
 Ripple.forEach((ripple) => {
-    ripple.addEventListener("click", function(e) {
-        let x = e.clientX - e.target.offsetLeft;
-        let y = e.clientY - e.target.offsetTop;
+  ripple.addEventListener("click", function (e) {
+    let x = e.clientX - e.target.offsetLeft;
+    let y = e.clientY - e.target.offsetTop;
 
-        let Ripples = document.createElement('span');
-        Ripples.style.left = x + "px";
-        Ripples.style.top = y + "px";
-        this.appendChild(Ripples);
+    let Ripples = document.createElement("span");
+    Ripples.style.left = x + "px";
+    Ripples.style.top = y + "px";
+    this.appendChild(Ripples);
 
-        setTimeout(() => {
-            Ripples.remove()
-        }, 10000);
-    });
+    setTimeout(() => {
+      Ripples.remove();
+    }, 10000);
+  });
 });
