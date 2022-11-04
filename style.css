@@ -164,8 +164,6 @@ header {
 }
 .nav-lists a:hover {
     color: var(--hover);
-    background-color: var(--bg);
-    box-shadow: 0 0px 30px rgba(22, 22, 22, 0.06)
 }
 
 /* Hamburger Menu  */
@@ -218,9 +216,7 @@ header {
             right: 0;
             overflow: hidden;
         }
-        
     }
-
     .menu {
         z-index: 1000;
         display: block;
