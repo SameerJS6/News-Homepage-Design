@@ -42,7 +42,7 @@
         --sidebar:  #2F304C;
         --svg: hsl(36, 100%, 99%);
         --white: hsl(36, 100%, 99%);
-        --read-hover: #B3B8EF;
+        --read-hover: hsl(235, 99%, 92%);
     }
 }
 /* CSS Reset  */
