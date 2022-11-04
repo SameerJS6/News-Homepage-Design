@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/SameerJS6/WaveLength-News-Homepage-Design.git](https://your-solution-url.com)
-- Live Site URL: [https://wavelength-news.netlify.app/](https://your-live-site-url.com)
+- Solution URL: [Solution Link](https://github.com/SameerJS6/WaveLength-News-Homepage-Design.git)
+- Live Site URL: [Live Site](https://wavelength-news.netlify.app/)
 
 ## My process
 
